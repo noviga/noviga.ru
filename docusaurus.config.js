@@ -7,21 +7,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Lerni',
-  tagline: 'Online Education Platform',
+  tagline: 'Онлайн-школа нового поколения',
   url: 'https://lerni.ru',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+  organizationName: 'lerni-edu',
+  projectName: 'lerni.ru',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'lerni-platform', // Usually your GitHub org/user name.
-  projectName: 'lerni.ru', // Usually your repo name.
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'ru',
     locales: ['ru'],
@@ -34,18 +28,8 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/lerni-platform/lerni.ru/edit/master/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/lerni-platform/lerni.ru/edit/master/',
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -57,22 +41,45 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Lerni',
         logo: {
           alt: 'Lerni Logo',
           src: 'img/logo.svg',
+          srcDark: "img/logo-inverted.svg",
         },
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'school/about',
             position: 'left',
-            label: 'Tutorial',
+            label: 'О школе',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/lerni-platform/lerni.ru',
-            label: 'GitHub',
+            type: 'dropdown',
+            label: 'Курсы',
+            position: 'left',
+            items: [
+              {
+                type: 'doc',
+                docId: 'courses/speedreading',
+                label: 'Скорочтение',
+              },
+            ],
+          },
+          {
+            type: 'doc',
+            docId: 'pricelist',
+            position: 'left',
+            label: 'Цены',
+          },
+          {
+            type: 'doc',
+            docId: 'tutors',
+            position: 'right',
+            label: 'Преподавателям',
+          },
+          {
+            href: 'https://lerni.ru',
+            label: 'Личный кабинет',
             position: 'right',
           },
         ],
@@ -81,46 +88,55 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Общее',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'О школе',
+                to: '/docs/school/about',
+              },
+              {
+                label: 'Платформа',
+                to: '/docs/school/platform',
+              },
+              {
+                label: 'Цены',
+                to: '/docs/pricelist',
+              },
+              {
+                label: 'Преподавателям',
+                to: '/docs/tutors',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Курсы',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Скорочтение',
+                to: '/docs/courses/speedreading',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'Сообщество',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
               {
                 label: 'GitHub',
-                href: 'https://github.com/lerni-platform/lerni.ru',
+                href: 'https://github.com/lerni-edu',
+              },
+            ],
+          },
+          {
+            title: 'Поддержка',
+            items: [
+              {
+                label: 'support@lerni.ru',
+                href: 'mailto:support@lerni.ru',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Lerni.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Lerni. Лицензия <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>`,
       },
       prism: {
         theme: lightCodeTheme,

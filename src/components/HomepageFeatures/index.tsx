@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import Link from '@docusaurus/Link';
 
 type FeatureItem = {
   title: string;
@@ -10,32 +11,53 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Уникальная платформа',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Обучение проходит на специально разработанной интерактивной платформе в увлекательной игровой форме.
+        <br /><br />
+        <div className={styles.buttons}>
+          <Link
+              className="button button--secondary button--lg"
+              to="/docs/school/platform">
+              О платформе
+          </Link>
+        </div>
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Понятные цены',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Никаких накруток или скидок в зависимости от обьёма &mdash; вы берёте ровно столько занятий, сколько нужно, по фиксированной и прозрачной цене.
+        <br /><br />
+        <div className={styles.buttons}>
+          <Link
+              className="button button--secondary button--lg"
+              to="/docs/pricelist">
+              Цены
+          </Link>
+        </div>
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Мотивированные преподаватели',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        80% оплаты идёт преподавателю, что позволяет нам выбрать лучших из лучших, а преподавателям работать с удовольствием.
+        <br /><br />
+        <div className={styles.buttons}>
+          <Link
+              className="button button--secondary button--lg"
+              to="/docs/tutors">
+              Преподавателям
+          </Link>
+        </div>
       </>
     ),
   },
