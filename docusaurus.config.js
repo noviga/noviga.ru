@@ -6,15 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Lerni',
+  title: 'Noviga',
   tagline: 'Онлайн-школа нового поколения',
-  url: 'https://lerni.ru',
+  url: 'https://noviga.ru',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'lerni-edu',
-  projectName: 'lerni.ru',
+  organizationName: 'noviga',
+  projectName: 'noviga.ru',
 
   i18n: {
     defaultLocale: 'ru',
@@ -42,7 +42,7 @@ const config = {
     ({
       navbar: {
         logo: {
-          alt: 'Lerni Logo',
+          alt: 'Noviga Logo',
           src: 'img/logo.svg',
           srcDark: "img/logo-inverted.svg",
         },
@@ -78,7 +78,7 @@ const config = {
             label: 'Преподавателям',
           },
           {
-            href: 'https://lerni.ru',
+            href: 'https://noviga.ru',
             label: 'Личный кабинет',
             position: 'right',
           },
@@ -122,7 +122,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/lerni-edu',
+                href: 'https://github.com/noviga',
               },
             ],
           },
@@ -130,13 +130,13 @@ const config = {
             title: 'Поддержка',
             items: [
               {
-                label: 'support@lerni.ru',
-                href: 'mailto:support@lerni.ru',
+                label: 'support@noviga.ru',
+                href: 'mailto:support@noviga.ru',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Lerni. Лицензия <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>`,
+        copyright: `Copyright © ${new Date().getFullYear()} Noviga. Лицензия <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>`,
       },
       prism: {
         theme: lightCodeTheme,
