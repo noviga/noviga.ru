@@ -1,13 +1,13 @@
-# lerni.ru
+# noviga.ru
 
 [![Publish Status][publish_badge]][publish_href]
 
-[publish_badge]: https://github.com/lerni-platform/lerni.ru/workflows/Publish/badge.svg
-[publish_href]: https://github.com/lerni-platform/lerni.ru/actions/workflows/publish.yml?query=branch%3Amaster
+[publish_badge]: https://github.com/noviga/noviga.ru/workflows/Publish/badge.svg
+[publish_href]: https://github.com/noviga/noviga.ru/actions/workflows/publish.yml?query=branch%3Amaster
 
 The online education platform.
 
-🥷 https://lerni.ru
+🥷 https://noviga.ru
 
 ## Installation
 
