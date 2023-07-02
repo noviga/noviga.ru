@@ -78,7 +78,7 @@ const config = {
             label: 'Преподавателям',
           },
           {
-            href: 'https://noviga.ru',
+            href: 'https://my.noviga.ru',
             label: 'Личный кабинет',
             position: 'right',
           },
