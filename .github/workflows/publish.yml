@@ -17,12 +17,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Patch URL
-        if: github.event_name == 'pull_request'
-        run: |
-          sed -i "s#baseUrl: '/'#baseUrl: '/pr-${{ github.event.number }}/'#" docusaurus.config.js
-          cat docusaurus.config.js | grep baseUrl
-
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -38,13 +32,8 @@ jobs:
       - name: Fix audit
         run: npm_config_yes=true npx yarn-audit-fix
 
-      - name: Build master docs
-        if: github.event_name == 'push'
+      - name: Build
         run: yarn build
-
-      - name: Build PR docs
-        if: github.event_name == 'pull_request'
-        run: yarn build --out-dir=build/pr-${{ github.event.number }}
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v3
@@ -55,6 +44,12 @@ jobs:
             path: build
 
       - name: Deploy
-        if: github.actor != 'dependabot[bot]'
-        id: deployment
+        if: github.event_name == 'push'
         uses: actions/deploy-pages@v2
+
+      # TODO: Uncomment this when we have this working
+      # - name: Deploy preview
+      #   if: github.event_name == 'pull_request' && github.actor != 'dependabot[bot]'
+      #   uses: actions/deploy-pages@v2
+      #   with:
+      #     preview: true
