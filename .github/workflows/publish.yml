@@ -45,11 +45,11 @@ jobs:
 
       - name: Deploy
         if: github.event_name == 'push'
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v3
 
       # TODO: Uncomment this when we have this working
       # - name: Deploy preview
       #   if: github.event_name == 'pull_request' && github.actor != 'dependabot[bot]'
-      #   uses: actions/deploy-pages@v2
+      #   uses: actions/deploy-pages@v3
       #   with:
       #     preview: true
