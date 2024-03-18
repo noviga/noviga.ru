@@ -1,11 +1,6 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+import {themes as prismThemes} from 'prism-react-renderer';
 
-const lightCodeTheme = require('prism-react-renderer').themes.github;
-const darkCodeTheme = require('prism-react-renderer').themes.dracula;
-
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+export default {
   title: 'Noviga',
   tagline: 'Онлайн-школа нового поколения',
   url: 'https://noviga.ru',
@@ -78,7 +73,7 @@ const config = {
             label: 'Преподавателям',
           },
           {
-            href: 'https://my.noviga.ru',
+            href: 'https://app.noviga.com',
             label: 'Личный кабинет',
             position: 'right',
           },
@@ -136,13 +131,11 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Noviga. Лицензия <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>`,
+        copyright: `Copyright © 2023–${new Date().getFullYear()} Noviga. Лицензия <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
       },
     }),
 };
-
-module.exports = config;
