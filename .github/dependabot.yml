@@ -4,8 +4,16 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      deps:
+        patterns:
+          - "*"
+
   - package-ecosystem: "github-actions"
     directory: "/"
-    labels: ["A4-insubstantial"]
     schedule:
       interval: "daily"
+    groups:
+      deps:
+        patterns:
+          - "*"
