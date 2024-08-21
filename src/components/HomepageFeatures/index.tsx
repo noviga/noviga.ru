@@ -49,7 +49,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        80% оплаты идёт преподавателю, что позволяет нам выбрать лучших из лучших, а преподавателям работать с удовольствием.
+        До 80% оплаты идёт преподавателю, что позволяет нам выбрать лучших из лучших, а преподавателям работать с удовольствием.
         <br /><br />
         <div className={styles.buttons}>
           <Link
